@@ -1,0 +1,41 @@
+body{
+	background-color: #FFB6C1;
+}
+
+h1{
+	margin-top: 5%;
+	text-align: center;
+	
+}
+
+#gif1{
+	margin-left: 35%;
+}
+
+#gif2{
+	margin-top: -20%;
+	margin-left: -1%;
+}
+
+
+#zdjęcie2{
+	margin-top: -39%;
+	margin-left: -1%;
+	height: 272px;
+	width: 498px;
+}
+
+#zdjęcie3{
+	margin-top: -39%;
+	margin-left: 69.1%;
+	height: 750px;
+	width: 492px;
+
+}
+
+#gif3{
+	margin-top: -18%;
+	margin-left: -1%;
+	height: 272px;
+	width: 498px;
+}

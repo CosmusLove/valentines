@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Przekierowanie</title>
+<script>
+window.onload = function() {
+    // Sprawdzamy, czy urządzenie to telefon
+    var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    // Jeśli to telefon, przekieruj na "tel.html", w przeciwnym razie na "komp.html"
+    if (isMobile) {
+        window.location.href = "walentynki-tel.html";
+    } else {
+        window.location.href = "walentynki-pc.html";
+    }
+}
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walentynki</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <style>
+        body {
+            background-color: #DDA0DD;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px; /* Adjust as needed */
+        }
+        #zdjęcie1 {
+            opacity: 0.8;
+            max-width: 100%; /* Adjust as needed */
+            display: block; /* Ensures proper display */
+            margin: 0 auto; /* Center the image */
+        }
+        .tak {
+            margin-left: 47.5%;
+            background-color: #7FFFD4;
+        }
+        .nie {
+            background-color: #B22222;
+        }
+    </style>
+</head>
+<body>
+    <img id="zdjęcie1" src="images/zdj1.png" alt="Zdjęcie 1">
+    <h1>Zostaniesz moją walentynką?</h1>
+    <a href="tak-tel.html"><button class="tak">Tak</button></a>
+    <button class="nie">Nie</button>
+
+    <script>
+        var nieButton = document.querySelector('.nie');
+        var takButton = document.querySelector('.tak');
+        var nieClickCount = 0;
+
+        nieButton.addEventListener('click', function() {
+            nieClickCount++;
+
+            if (nieClickCount <= 9) {
+                this.textContent = getNieButtonText(nieClickCount);
+            } else {
+                this.style.display = 'none'; 
+            }
+
+            // Reset font size after certain point
+            if (nieClickCount >= 10) {
+                takButton.style.fontSize = ''; // Reset to default
+            } else {
+                var currentFontSize = window.getComputedStyle(takButton).getPropertyValue('font-size');
+                var newSize = parseFloat(currentFontSize) + 30; 
+                takButton.style.fontSize = newSize + 'px';
+            }
+        });
+
+        function getNieButtonText(count) {
+            switch (count) {
+                case 1: return 'Jesteś pewna?';
+                case 2: return 'Napewno?';
+                case 3: return 'Bez szans?';
+                case 4: return 'Może jednak?';
+                case 5: return 'Serio?';
+                case 6: return 'Nie chcesz spróbować?';
+                case 7: return 'Nie masz wątpliwości?';
+                case 8: return 'Masz absolutną pewność?';
+                case 9: return 'Nadal nie?';
+                default: return '';
+            }
+        }
+    </script>
+</body>
+</html>

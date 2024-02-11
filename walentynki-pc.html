@@ -1,0 +1,56 @@
+<html>
+ <head>
+	<title>Walentynki </title>
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="style1.css" />
+	<link rel="shortcut icon" href="images/favicon.ico">
+ </head>
+ <body>
+ <img id="zdjęcie1" src="images/zdj1.png">
+ <h1> Zostaniesz moją walentynką? </h1>
+ <a href="tak-pc.html"> <button class="tak" > Tak </button> </a>
+ <button class="nie"> Nie </button>
+
+<script>
+var nieButton = document.querySelector('.nie');
+        var takButton = document.querySelector('.tak');
+        var nieClickCount = 0;
+
+        nieButton.addEventListener('click', function() {
+            nieClickCount++;
+
+            if (nieClickCount === 1) {
+                this.textContent = 'Jesteś pewna?';
+            } else if (nieClickCount === 2) {
+                this.textContent = 'Napewno?';
+            }
+			else if (nieClickCount === 3) {
+                this.textContent = 'Bez szans?';
+            }
+			else if (nieClickCount === 4) {
+                this.textContent = 'Może jednak?';
+            }
+			else if (nieClickCount === 5) {
+                this.textContent = 'Serio?';
+            }
+			else if (nieClickCount === 6) {
+                this.textContent = 'Nie chcesz spróbować?';
+            }
+			else if (nieClickCount === 7) {
+                this.textContent = 'Nie masz wątpliwości?';
+            }
+			else if (nieClickCount === 8) {
+                this.textContent = 'Masz obsolutną pewność?';
+            }
+			else if (nieClickCount === 9) {
+                this.style.display = 'none'; 
+            }
+			
+			
+            var currentFontSize = window.getComputedStyle(takButton).getPropertyValue('font-size');
+            var newSize = parseFloat(currentFontSize) + 30; 
+            takButton.style.fontSize = newSize + 'px';
+        });
+</script>
+ </body>
+ </html>
